@@ -19,33 +19,32 @@ function passwordCombo (upper, lower, digit, special) {
   var pw_upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'; 
   var pw_lower = 'abcdefghijklmnopqrstuvwxyz'; 
   var pw_digit = '0123456789'; 
-  var pw_special = '@#$'; 
+  var pw_special = '!"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~'; 
   var userchoice = false;
 
 
-  alert ("User Choice include: " + upper + lower + digit + special)
   if (upper == true) {
     pwcombo += pw_upper;
     userchoice = true;
-    alert("Ok Upper case should be added. pwcombo is: " + pwcombo);
+    //console.log("Ok Upper case should be added. pwcombo is: " + pwcombo);
   }
   
   if (lower == true) {
     pwcombo += pw_lower;
     userchoice = true;
-    alert("Ok Lower case should be added. pwcombo is: " + pwcombo);
+    //console.log("Ok Lower case should be added. pwcombo is: " + pwcombo);
   }
   
   if (digit == true) {
     pwcombo += pw_digit;
     userchoice = true;
-    alert("Ok Numeric should be added. pwcombo is: " + pwcombo);
+    //console.log("Ok Numeric should be added. pwcombo is: " + pwcombo);
   }
     
   if (special == true) {
     pwcombo += pw_special;
     userchoice = true;
-    alert("Ok Special Chara should be added. pwcombo is: " + pwcombo);
+    //console.log("Ok Special Chara should be added. pwcombo is: " + pwcombo);
   }
   
 
@@ -108,13 +107,12 @@ function generatePassword () {
   }
 
 
-  alert("Entered Generate Password");
   // Initialize password to null
   var pass = ''; 
 
   // the final pw possible combo depends on user criteria
   var pwcombo = passwordCombo(upper, lower, digit, special);
-  alert ("pwcombo is: " + pwcombo);
+  //console.log("pwcombo is: " + pwcombo);
 
   //math.random to generate a # within this range
   for (i=0; i < len; i++) {
